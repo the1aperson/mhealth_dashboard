@@ -1,0 +1,56 @@
+@tooltip-bg: white;
+@tooltip-arrow-color: white;
+@tooltip-color: black;
+
+.tooltip-inner {
+  color: @tooltip-color;
+  background-color: @tooltip-bg;
+  font-family: "Inter UI", sans-serif;
+  font-size: 14px;
+  max-width: 220px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 1px 7px rgba(0,0,0,0.3);
+}
+
+.tooltip.in
+{
+	opacity: 1;
+}
+
+// Arrows
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-left .tooltip-arrow {
+  	border-top-color: @tooltip-arrow-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @tooltip-arrow-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @tooltip-arrow-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+}

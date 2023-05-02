@@ -1,0 +1,227 @@
+#roleform-permissions label
+{
+	display: block;
+}
+  #research-staff-grid th{
+	padding:16px;
+	padding-bottom: 0;
+  }
+  #research-staff-container, #role-container{
+	padding:0;
+	padding-top: 16px;
+	overflow-x: scroll;
+  }
+  #research-staff-container .section-header, #role-container .section-header{
+	padding:0 0 25px 16px;
+  }
+  #role-container .table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: white;
+  }
+  #role-container .table-striped > tbody > tr:nth-of-type(even) {
+	background-color: 	rgba(103,200,199,0.06);
+  }
+  .role-table,.roles-table th, .table-permission, .role-check, .role-count{
+	border:1px solid #DFE3E6;
+	border-top:0;
+  }
+  .roles-table th{
+	background-color: rgba(103,200,199,0.1);
+  }
+  .roles-table thead tr{
+	height:80px;
+  }
+  #roles-back{
+	margin-top:25px;
+  }
+  #roles-buttons{
+	margin-top:-50px;
+  }
+  .roles-table{
+	width:100%;
+	border-collapse: separate;
+  }
+  .role-header{
+	margin:0 0 45px -15px;
+  }
+  .role-create{
+	width:50%;
+	}
+	.role-compare{
+		margin-left: 210px;
+		position: absolute;
+		text-decoration: underline;
+		font-family: 'Inter UI', 'sans serif';
+		font-size: 12px;
+		font-weight: bold;
+		color: #005F85;
+	}	
+  .group-permission {
+	background-color: #005F85;
+	color: white;
+	font-size: 14px;
+	font-family: 'Inter UI', sans-serif;
+	padding: 0 0 0 10px;
+	font-weight: 500;
+	display: block;
+  }
+  .group-name{
+	background-color: #005F85;
+	color: white;
+	font-size: 14px;
+	font-family: 'Inter UI', sans-serif;
+	font-weight: 500;
+  }
+  .role-label{
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: capitalize;
+	font-family: 'Inter UI', sans-serif;
+  }
+  .role-label span{
+	margin: 0 0 0 35px;
+  }
+  .role-row{
+	background-color:  rgba(103,200,199,0.1);
+	}
+	.role-row th{
+		background-color: rgba(244, 255, 255,1);
+		border-right: 1px solid #DFE3E6;
+	}
+	.roles-table .role-row th{
+		position: sticky;
+    top: 58px;
+		background-color: rgba(244, 255, 255,1);
+		border-right: 1px solid #DFE3E6;
+		min-width:115px;
+	}
+
+  .role-white{
+	background-color: white;
+  }
+  // #role-grid th{
+	// padding:0 0 10px 0px;
+  // }
+  #role-container .group-label{
+	height:15px;
+	padding:3px 0 3px 15px;
+	font-weight: 600;
+  }
+  .table-permission{
+	width: 30%;
+	padding: 15px;
+	text-transform: capitalize;
+  }
+  .role-count{
+	font-family: 'Inter UI', sans-serif;
+	font-size: 22px;
+  }
+  .role-check, .role-count{
+  text-align: center;
+  }
+  .role-check .icon-checkmark-only_blue{
+	height:27px;
+	width:27px;
+  }
+  .table-role{
+	text-align: center;
+  }
+	.role-edit, .role-delete{
+		color:#005F85;
+		font-weight: bold;
+		font-size: 12px;
+		font-family: 'Inter UI', sans-serif;
+		text-decoration: underline;
+		padding:0 5px;
+	}
+	.role-delete{
+		padding-left:2px;
+	}
+	.role-permit{
+	position: absolute;
+	margin:-25px 0 0 5px;
+  }
+  .role-permit input[type="checkbox"]{
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 4px 0px 0 1px;
+	opacity: 0;
+	left:0;
+  }
+  .role-permit input[type="checkbox"] + label::before {
+	border: 2px solid #5A6872;
+	border-top: 2px solid #5A6872;
+	border-bottom:2px solid #5A6872;
+	content: "";
+	height: 18px;
+	width: 18px;
+	margin:0px 0 0 -3px;
+	position: absolute;
+	cursor: pointer;
+  }
+  .role-permit input[type="checkbox"] + label::after {
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	background-color: #005F85;
+	background-image: url("../img/icons/checkmark-no_outline-white@2x.png");
+	background-size: cover;
+	background-position: center;
+	margin:0px 0 0 -3px;
+	cursor: pointer;
+  }
+  .role-permit input:checked + label::after {
+	opacity: 1;
+  }
+  .in .permission-break:last-child{
+	display: none;
+  }
+  .permission-break{
+	margin:40px 0 35px 0;
+  }
+  .permission-break:first-child{
+	margin:45px 0 35px 0;
+  }
+  
+  .role-form .button-list{
+	margin-bottom:45px;
+  }
+  .modal-footer .button-list {
+	margin: 0;
+  }
+  .field-roleform-permissions {
+	margin: 0 0 -10px 0;
+  }
+  #user-form-add-study{
+	margin-left:15px;
+	color:#005F85;
+  }
+  .tab-pane > .active{
+	display:block;
+  }
+  .tab-pane{
+	display:none;
+  }
+  // .staff-tabs{
+	// margin:0;
+	//min-width: 1000px;
+
+	// }
+	.new-staff-header, .new-rater-header{
+		margin:0 0 45px 0px;
+	}
+	.new-staff-header .back-button, .new-rater-header .back-button{
+		margin-left:-5px;
+	}	
+  // .rater-tabs{
+	// margin:-93px 0 50px 0;
+  // }
+	.new-role-header{
+		margin:0 0 45px 0px;
+	}
+	.new-role-header .back-button{
+		margin-left:-5px;
+	}

@@ -1,0 +1,197 @@
+.hello-please-log-in {
+	//height: 77px;
+	//width: 428px;
+	color: #272D33;
+	font-family: "Inter UI";
+	font-size: 28px;
+	line-height: 36px;
+}
+
+/* Privacy policy consent banner */
+#policyConsent{
+	background-color: rgba(20, 20 ,20, 0.8);
+	min-height: 26px;
+	font-size: 14px;
+	color:#ccc;
+	line-height: 26px;
+	padding: 8px 0 8px 30px;
+	font-family: "Inter UI", sans-serif;
+	position: fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	display: none;
+	z-index: 9999;
+	a
+	{
+		color:#4B8EE7;
+		text-decoration: none;
+	}
+	button
+	{
+		background-color: #F1D600;
+		color:#000;
+		display: inline-block;
+		border-radius: 5px;
+		padding:0 20px;
+		cursor:pointer;
+		/* float: right; */
+		margin:0 20px 0 15px;
+	}
+	button:hover
+	{
+		background-color: #E0C91F;
+	}
+}
+#policyConsentForm{
+	margin: 0 10% 0 10%;
+}
+.policy-wrapper{
+	padding: 16px 35px 70px 35px;
+}
+.policy-section{
+	margin-bottom:12px;
+}
+/* Login Footer */
+.footer-login{
+	width: 100%;
+	background-color: #0c2852;
+	display: block;
+	height: 6em;
+	left:0;
+	bottom:0;
+	position: fixed;
+}
+.footer-links{
+	float:right;
+	display: grid;
+	margin: 15px 10% 0 0;
+	color:white;
+	a 
+	{
+		color:white;
+	}
+}
+.password_reveal{
+	position: relative;
+	margin-bottom: 20px;
+  }
+  .show_password{
+	position: absolute;
+	  right: 25px;
+	  top: 37px;
+	  color: #005F85;
+	  cursor: pointer;
+  }
+  .form-group .icon-visibility-on_blue{
+	position: absolute;
+	right:5px;
+	top:40px;
+	cursor: pointer;
+  }
+  .form-group .icon-visibility-off_blue{
+	position: absolute;
+	right:5px;
+	top:40px;
+	cursor: pointer;
+  }
+  .field-roleform-password .show_password{
+	top: 33px;
+}
+.field-roleform-password .icon-visibility-on_blue{
+	top:36px;
+}
+.field-roleform-password .icon-visibility-off_blue{
+	top:36px;
+}
+.login_policy{
+	color: #005F85;
+	text-decoration: underline;
+	font-weight: bold;
+}  
+.field-loginform-accept_privacy{
+	margin-left:35px;
+}
+#login-form input[type="checkbox"]{
+	height: 0px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	/* top: 0; */
+	width: 0px;
+	margin-top:6px;
+	cursor: pointer;
+	margin-left:25px;
+}
+#login-form input[type="checkbox"]:not(:checked) + label::before {
+	border: 2px solid #5A6872;
+	border-top: 2px solid #5A6872;
+	border-bottom:2px solid #5A6872;
+	content: "";
+	height: 18px;
+	left: -10px;
+	position: absolute;
+	// bottom:187px;
+	width: 18px;
+	/* margin-top:2px; */
+	margin-left:31px;
+	cursor: pointer;
+}
+#login-form input[type="checkbox"]:checked + label::before {
+	content: "";
+	height: 16px;
+	left: -9px;
+	opacity: 1;
+	position: absolute;
+	// bottom:188px;
+	/* top: 7px; */
+	background-color: #005F85;
+	width: 16px;  
+	background-image: url("../img/icons/checkmark-no_outline-white@2x.png");
+	background-size: cover;
+	background-position: center;
+	// margin-top:-39px;
+	margin-left:31px;
+	cursor: pointer;
+}
+.policy_label{
+	padding-top: 1px;
+	color:black;
+	font-weight: normal;
+}
+.site-login hr{
+	margin: 30px auto 20px -57%;
+	width: 214%;
+	position: relative;
+}
+#login-form button:disabled{
+	opacity: 50%;
+}
+.login_policy, .login-links a{
+	color: #005F85;
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 12px;
+}
+.login-links a:first-of-type{
+	float: left;
+}
+.login-links a:last-of-type{
+	float:right;
+}
+.login-links a:nth-of-type(2){
+	vertical-align: text-bottom;
+}
+.field-loginform-accept_privacy label{
+	font-family: "Inter UI", sans-serif;
+	font-size: 14px;
+}
+#request-password-reset-form .btn-primary{
+	background-color: #005F85;
+	border-color: #005F85;
+	border-radius: 100px;
+	height: 40px;
+	font-size: 14px;
+	font-family: 'Inter UI', 'sans-serif';
+}																 

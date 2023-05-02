@@ -1,0 +1,226 @@
+.alert-item
+{
+	padding: 7px;
+	border-width: 1px;
+	border-color: @alert-border-gray;
+	border-style: solid;
+	margin-bottom: 8px;
+	height: 54px;
+	position: relative;
+	padding-left: 54px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.alert-section-body .alert-item{
+  box-shadow: none;
+}
+.alerts-index .alert-item{
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.alert-item::before
+{
+	content: '';
+	border-left-style: solid;
+	border-left-width: 5px;
+	height: 54px;
+	width: 54px;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	background-size: 16px 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/*! Alert types */
+
+.alert-item-message::before
+{
+	border-left-color: @success-green;
+	background-image: url("../img/icons/checkmark-solid_green@2x.png");
+}
+
+.alert-item-warning::before
+{
+	border-left-color: @warning-yellow;
+	background-image: url("../img/icons/warning-solid_yellow@2x.png");
+}
+
+.alert-item-danger::before
+{
+	border-left-color: @danger-red;
+	background-image: url("../img/icons/error-solid_red@2x.png");
+}
+
+.alert-item-actions::before
+{
+	border-left-color: 10px;
+}
+
+.alert-item-actions .border-left{
+	padding-left:3px;
+  }
+  
+/*! Overall alert structure */
+
+.alert-section-top
+{
+	
+}
+
+.alert-section-body
+{
+	margin-top: 14px;
+}
+
+/*! Alert item content */
+
+.alert-item-content
+{
+	padding-top: 3px;
+}
+
+.alert-item-date
+{
+	font-size: 10px;
+	color: @subsection-text-blue;	
+}
+
+.alert-item-alert-message
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: @subsection-text-blue;
+	
+	a
+	{
+		.text-semibold();
+		text-decoration: underline;
+	}
+}
+
+.alert-log-follow-up
+{
+	color: @section-blue;
+	margin-top: 11px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.alert-item-follow-up-msg
+{
+	height: 40px;
+	border-radius: 10px;
+	background: @subsection-light-blue;
+	font-size: 12px;
+	padding: 4px 8px;
+	p
+	{
+		margin-bottom: 0px;
+	}
+}
+
+.alert-item-follow-up-date
+{
+	font-size: 10px;
+	color: @subsection-text-blue;
+}
+
+.alert-item-hide
+{
+	width: 10px;
+	height: 10px;
+	margin: 15px 0px 15px 5px;
+	cursor: pointer;
+}
+
+.alert-section-link
+{
+	.text-bold();
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 12px;
+}
+.no-follow-up-form .follow-up{
+	margin:-2px 0 0 -162px;
+  }
+  .no-follow-up-form .log-label{
+	color:#005F85;
+	font-size: 12px;
+	font-weight:bold;
+	text-decoration: underline;
+  }
+  .no-follow-up-form .follow-up input[type="checkbox"]{
+	left:-3px;
+  }
+  .no-follow-up-form .follow-up input[type="checkbox"] + label::before{
+	left:-5px
+  }
+  .no-follow-up-form .follow-up input[type="checkbox"] + label::after{
+	left:-4px
+  }
+  .follow-up-options{
+	margin-left:20px;
+  }
+  .follow-up{
+	position: absolute;
+	padding-left:15px;
+	margin: 10px 0 0 0px;
+  }
+  .follow-up span{
+	text-decoration: underline;
+	font-size: 12px;
+	color: #005F85;
+  }
+  .follow-up input[type="checkbox"]{
+	height: 0px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	/* top: 0; */
+	width: 0px;
+	margin-top:6px;
+	cursor: pointer;
+  }
+  .follow-up input[type="checkbox"] + label::before {
+	border: 1px solid #5A6872;
+	border-top: 2px solid #5A6872;
+	border-bottom:2px solid #5A6872;
+	content: "";
+	height: 16px;
+	left: 15px;
+	position: absolute;
+	/* top: 5px; */
+	width: 14px;
+	margin-top:2px;
+	cursor: pointer;
+  }
+  .follow-up input[type="checkbox"] + label::after {
+	content: "";
+	height: 12px;
+	left: 16px;
+	opacity: 0;
+	position: absolute;
+	/* top: 7px; */
+	background-color: #005F85;
+	width: 12px;  
+	background-image: url("../img/icons/checkmark-no_outline-white@2x.png");
+	background-size: cover;
+	background-position: center;
+	margin-top:4px;
+	cursor: pointer;
+  }
+  .follow-up input:checked + label::after {
+	opacity: 1;
+  }
+  .log-label{
+	padding-top: 1px;
+	color:black;
+	font-weight: normal;
+  }
+  .log-modal{
+	position: inherit;
+	margin:0;
+	padding-left:5px;
+  }  

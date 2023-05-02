@@ -1,0 +1,135 @@
+/* media query sizes from Bootstrap */
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+
+/* general utility classes that don't particularly pertain to a specific thing */
+
+.cursor
+{
+	cursor: pointer;
+}
+
+/* override Bootstrap's collapse animations by adding no-transition class */
+
+.no-transition.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: block
+}
+
+.no-transition.collapsing.in
+{
+	display: none;
+}
+
+
+/* takes the given ruleset, and applies it to variations of the parent selector,
+	creating versions that you can use at the different size classes.
+*/
+
+.vary-for-screens(@ruleset)
+{
+	&
+	{
+		@ruleset();
+	}
+	
+	@media (max-width: @screen-xs-max) {
+		&-xs
+		{
+			@ruleset();
+		}
+	}
+	
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	    &-sm
+    	{
+			@ruleset();
+		}
+	}
+	
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+		&-md
+		{
+			@ruleset();
+		}
+	}
+	
+	@media (min-width: @screen-lg-min) {
+	    &-lg
+	    {
+			@ruleset();
+		}
+	}
+}
+
+
+.screen-lg(@ruleset)
+{
+	@media (min-width: @screen-lg-min) 
+	{
+		@ruleset();
+	}
+}
+
+.screen-md(@ruleset)
+{
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) 
+	{
+		@ruleset();
+	}
+}
+
+.screen-sm(@ruleset)
+{
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) 
+	{
+		@ruleset();
+	}
+}
+
+.screen-xs(@ruleset)
+{
+	@media (max-width: @screen-xs-max) 
+	{
+		@ruleset();
+	}
+}

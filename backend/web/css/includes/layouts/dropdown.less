@@ -1,0 +1,129 @@
+/*! styles specifically for top-nav dropdowns */
+.navbar-nav
+{
+	.dropdown .caret {
+	    display: none;
+	}
+	
+	& li > .dropdown-menu {
+  /* position: fixed; */
+  top: 51px;
+		left: 0px;
+	    background-color: @topnav-blue;
+	    border: 0px;
+	}
+	
+	& li.dropdown-menu-right > .dropdown-menu
+	{
+		left: auto;
+		right: 0px;
+	}
+	
+	& li.dropdown-menu-left > .dropdown-menu
+	{
+		right: auto;
+		left:0px;
+	}
+	
+	.dropdown-menu > li
+	{
+		height: 40px;
+		// border-top: 1px solid @text-field-active-blue;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.dropdown-menu > li:nth-child(even) 
+	{
+		height: 40px;
+		/* border-top: 1px solid #30588C; */
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.dropdown-menu > li > a {
+	    color: white;
+	    font-size: 14px;    
+		line-height: 36px;
+		padding-left: 10px;
+		padding-right: 0px;
+		font-family: "Inter UI Medium", sans-serif;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:active, .dropdown-menu > li > a:focus {
+	    color: @leftnav-highlight-blue;
+	    background-color: @topnav-blue;
+	}
+	
+	.dropdown-view-all-sites
+	{
+		// text-align: center;
+		color: white;
+	}
+	.dropdown-menu > li.dropdown-view-all-sites
+	{
+		height: auto;
+		// padding-top: 16px;
+		// padding-bottom: 10px;
+	}
+	.dropdown-menu .dropdown-view-all-sites a
+	{
+		// border: 2px solid white;
+		height: 32px;
+		// border-radius: 16px;
+	    line-height: 24px;
+	}
+	
+	&.navbar-right li  > .dropdown-menu
+	{
+		right: 0px;
+		left: auto;
+		width: 100px;
+	}
+	
+	& > li > a.dropdown-toggle
+	{
+		padding-top: 14px;
+		margin:0;
+		padding-bottom: 0px;
+	}
+}
+
+
+.dropdown-toggle, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: @topnav-blue;
+}
+
+
+
+.navbar-nav > 
+.study-dropdown-container {
+    margin-left: -15px;
+    margin-top: 2px;
+}
+
+.view-data{
+	position: absolute;
+	padding: 25px 15px 0 0;
+	font-family: 'Inter UI' sans-serif;
+	font-size:14px;
+  }
+
+  .study-dropdown-container{
+	margin: -22px 0 0 0;
+	float:right;
+  .dropdown-toggle{
+	border-radius:25px;
+	right:4px;
+	top:4px;
+  }
+  li a.dropdown-toggle 
+	{
+		padding-top: 14px;
+		margin:0;
+		padding-bottom: 0;
+	}
+}

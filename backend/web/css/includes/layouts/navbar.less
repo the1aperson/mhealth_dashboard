@@ -1,0 +1,309 @@
+@navbar-full-width: 211px;
+@navbar-collapsed-width: 45px;
+
+/*! clearing bootstrap nav styling */
+
+.nav > li > a:hover, .nav > li > a:focus
+{
+	background: none !important;
+}
+
+/*! left navbar */
+
+.navbar-fixed-left
+{
+	position: fixed;
+	left: 0;
+	height: 100%;
+	width: @navbar-full-width;
+	background: @leftnav-bg-gray;
+	color: white;
+	padding-top: 24px;
+	border: none;
+	border-radius: 0px;
+	overflow: hidden;
+	transition: width, 0.25s;
+	z-index: 9;
+}
+
+.navbar-fixed-left .navbar-left-active
+{
+	color: @leftnav-highlight-blue;
+}
+
+.navbar-fixed-left a
+{
+	color: white;
+}
+
+.navbar-fixed-left a:active, .navbar-fixed-left a:hover
+{
+	color: @leftnav-highlight-blue;
+}
+
+.navbar-fixed-left .navbar-header
+{
+	float: none;
+}
+
+#navbar-left-list
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow-x: visible;
+    width: @navbar-full-width;
+}
+
+
+.leftnav-offset
+{
+	margin-left: @navbar-full-width;
+	transition: margin-left, 0.25s;
+}
+
+
+/*! Collapsed navbar */
+
+
+.hide-navbar
+{
+	.navbar-fixed-left
+	{
+		width: @navbar-collapsed-width;
+	}
+	
+	.leftnav-offset
+	{
+		margin-left: @navbar-collapsed-width;
+	}
+	
+	.navbar-left-toggle-button .nlt-icon
+	{
+		background-image: url('../img/icons/chevron_right_teal@2x.png');
+	}
+}
+
+.navbar-left-active .nav-pill-rect
+{
+    background-color :@leftnav-highlight-blue;
+    height: 30px;
+    width: 5px;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+}
+
+.nav-pill-icon
+{
+	margin-left: -10px;
+	margin-right: 13px;
+	vertical-align: text-top;
+}
+
+#navbar-left-toggle
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 40px;
+	width: 100%;
+	background: #242E40;
+}
+
+.navbar-left-toggle-button
+{
+	padding: 12px;
+	height: 40px;
+	width: 40px;
+	
+	.nlt-icon
+	{
+		display: block;
+		width: 16px;
+		height: 16px;
+		
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('../img/icons/chevron_left_teal@2x.png');
+	}
+}
+
+/*! top navbar */
+
+#top-nav
+{
+	position: fixed;
+	width: 100%;
+	height: 58px;
+	margin-bottom: 0px;
+	background: @topnav-blue;
+	color: white;
+	z-index: 10;
+	max-width: 100%;
+  min-width:1050px;
+}
+
+.top-nav-section
+{
+	height: 100%;
+}
+
+.top-nav-text
+{
+	padding: 15px;
+	line-height: 26px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.navbar-fixed-top > .container > .navbar-header {
+	min-width: 200px;
+}
+
+.topnav-offset
+{
+	padding-top: 58px;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+
+.navbar-nav > li > span {
+	display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #9d9d9d;
+}
+
+.navbar-study-name
+{
+	color: white;
+	float: left;
+  height: 35px;
+	padding: 0px 0 5px 20px;
+	font-size: 14px;
+  line-height: 26px;
+	max-width: 160px;
+  font-family: 'Inter Ui', sans-serif;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  }
+
+
+.navbar-right > li > a, .navbar-right > li > span {
+  color: white;
+}
+
+
+#study-dropdown-wrapper .dropdown-menu
+{
+	min-width: 208px;
+	max-width: 208px;
+	border-radius: 0px 0px 25px 25px;
+	border: 1px solid #67C8C7;
+	border-top: 1px solid white;
+	position: fixed;
+  background-color: #172752; 
+  }
+  .navbar-border {
+	border: 1px solid #67C8C7;
+	border-radius: 25px;
+	height:80%;
+	margin-top:5px;
+  }
+  
+.navbar-border-left
+{
+	border-left: 1px solid @text-field-active-blue;
+}
+
+.navbar-border-right
+{
+	border-right: 1px solid @text-field-active-blue;
+}
+.nav-tabs{
+	border-bottom: 0;
+	li	{	
+		margin-left:8px;		
+	}
+}
+  .nav-tabs > li > a{
+	margin:0;
+  }
+  .navbar-current-study {
+	margin: 0;
+	padding: 3px 0 0 20px;
+	font-family: 'Inter Ui', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	color: #67C8C7;
+  }
+  .navbar-update{
+	margin-left:15px;
+	font-size: 12px;
+  }
+  .navbar-updated-time{
+	margin: 7px 0;
+  }
+  .refresh{
+	font-size: 14px;
+	text-decoration: underline;
+	text-align: center;
+	color:#67C8C7;
+	cursor: pointer;
+  }
+  .new-data{
+	display: flex;
+  }
+  .new-data a{
+  margin-left: 5px;
+  }
+  .new-data-alert{
+	color:#67C8C7;
+	margin-right:5px;
+	margin-top:1px;
+  }
+  .selected-study{
+	background-color: #67C8C7;
+	}  
+	.view-data{
+		padding: 25px 15px 0 8px;
+		font-family: 'Inter UI' sans-serif;
+		font-size:14px;
+	}
+	.navbar-fixed-left hr{
+		margin:32px -10px;
+		background-color: #3C3C3D;
+		height: 1px;
+	}
+	.alt-nav li{
+		margin-bottom:30px;
+		margin-top:-10px;
+	}
+	.alt-nav a{
+		font-size: 12px;
+		font-family: "Inter UI", sans-serif;
+		opacity: .7;
+		color:#FFFFFF;
+		margin-left: -31px;	
+	}
+#session-expiration {
+	width: 220px;
+}
+#top-nav-chevron {
+	padding-top: 26px;
+}
+	.navbar-toggle{
+		margin-top:-42px;
+	}
+	.user-nav{
+		margin:0;
+		display:flex;
+	}
+	
