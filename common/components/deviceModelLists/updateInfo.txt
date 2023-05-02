@@ -1,0 +1,9 @@
+Last updated 10/01/18
+
+ios_devices.json is adapted from https://gist.github.com/adamawolf/3048717
+
+android_devices.json is from https://github.com/pbakondy/android-device-list
+
+
+https://storage.googleapis.com/play_public/supported_devices.csv
+https://support.google.com/googleplay/answer/1727131?hl=en
